@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:language_learn/pages/home_page.dart';
 
 void main() {
-  runApp(const TokuApp());
+  runApp(const LanguageLearningApp());
 }
 
-class TokuApp extends StatelessWidget {
-  const TokuApp({Key? key}) : super(key: key);
+class LanguageLearningApp extends StatelessWidget {
+  const LanguageLearningApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

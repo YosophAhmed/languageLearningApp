@@ -1,61 +1,71 @@
 import 'package:flutter/material.dart';
 
 import '../components/item.dart';
-import '../models/number.dart';
+import '../models/item_model.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
 
-  final List<Number> numbers = const [
-    Number(
+  final List<ItemModel> numbers = const [
+    ItemModel(
       image: 'assets/images/numbers/number_one.png',
-      JName: 'Ichi',
-      EName: 'One',
+      jName: 'Ichi',
+      eName: 'One',
+      sound: 'number_one_sound.mp3',
     ),
-    Number(
-        image: 'assets/images/numbers/number_two.png',
-        JName: 'Ni',
-        EName: 'Two',
+    ItemModel(
+      image: 'assets/images/numbers/number_two.png',
+      jName: 'Ni',
+      eName: 'Two',
+      sound: 'number_two_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_three.png',
-      JName: 'San',
-      EName: 'Three',
+      jName: 'San',
+      eName: 'Three',
+      sound: 'number_three_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_four.png',
-      JName: 'Shi',
-      EName: 'Four',
+      jName: 'Shi',
+      eName: 'Four',
+      sound: 'number_four_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_five.png',
-      JName: 'Go',
-      EName: 'Five',
+      jName: 'Go',
+      eName: 'Five',
+      sound: 'number_five_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_six.png',
-      JName: 'Roku',
-      EName: 'Six',
+      jName: 'Roku',
+      eName: 'Six',
+      sound: 'number_six_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_seven.png',
-      JName: 'Sebun',
-      EName: 'Seven',
+      jName: 'Sebun',
+      eName: 'Seven',
+      sound: 'number_seven_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_eight.png',
-      JName: 'Hachi',
-      EName: 'Eight',
+      jName: 'Hachi',
+      eName: 'Eight',
+      sound: 'number_eight_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_nine.png',
-      JName: 'Kyu',
-      EName: 'Nine',
+      jName: 'Kyu',
+      eName: 'Nine',
+      sound: 'number_nine_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_ten.png',
-      JName: 'Ju',
-      EName: 'Ten',
+      jName: 'Ju',
+      eName: 'Ten',
+      sound: 'number_ten_sound.mp3',
     ),
   ];
 
@@ -63,31 +73,26 @@ class NumbersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Numbers',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color(0xff46322B),
+        centerTitle: true,
+        backgroundColor: const Color(0xff46322B),
       ),
-      body: ListView(
-        children: [
-          Item(number: numbers[0]),
-          Item(number: numbers[1]),
-          Item(number: numbers[2]),
-          Item(number: numbers[3]),
-          Item(number: numbers[4]),
-          Item(number: numbers[5]),
-          Item(number: numbers[6]),
-          Item(number: numbers[7]),
-          Item(number: numbers[8]),
-          Item(number: numbers[9]),
-        ],
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return Item(
+            item: numbers[index],
+            itemType: 'numbers',
+            color: const Color(0xffEF9235),
+          );
+        },
+        itemCount: numbers.length,
       ),
     );
   }
 }
-
-
