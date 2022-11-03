@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../components/item.dart';
 import '../components/phrase_item.dart';
 import '../models/phrase_model.dart';
 
@@ -17,11 +16,6 @@ class PhrasesPage extends StatelessWidget {
         jName: 'Go kibun wa ikagadesu ka?',
         eName: 'How are you feeling?',
         sound: 'how_are_you_feeling.wav',
-    ),
-    Phrase(
-        jName: 'Watashi wa anime ga daisukidesu',
-        eName: 'I love anime',
-        sound: 'i_love_anime.wav',
     ),
     Phrase(
       jName: 'Puroguramingu ga daisuki',
@@ -47,11 +41,6 @@ class PhrasesPage extends StatelessWidget {
       jName: 'Hai, kimasu',
       eName: 'Yes i am coming',
       sound: 'yes_im_coming.wav',
-    ),
-    Phrase(
-      jName: 'Kōdoku suru koto o wasurenaide kudasai',
-      eName: 'Don\'t forget to subscribe',
-      sound: 'dont_forget_to_subscribe.wav',
     ),
   ];
 
